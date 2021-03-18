@@ -14,7 +14,7 @@ def coinChange(self, coins, amount):
         if amount == 0:
             return 0
 
-       
+         
         goodrow = []
         for s in range(1, amount+1):
             min_val = float("inf")
@@ -25,7 +25,7 @@ def coinChange(self, coins, amount):
                     min_val = val
             goodrow.append(min_val)
         if goodrow[amount-1] == float("inf"):
-            retu
+            return -1
         return goodrow[amount-1]
 
 # Min/Max -> when a DP problem asks for, shortest most longest least
